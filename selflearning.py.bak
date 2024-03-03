@@ -1,0 +1,29 @@
+import random
+
+class SelfLearningAI:
+    def __init__(self):
+        self.knowledge = []
+
+    def learn(self, experience):
+        self.knowledge.append(experience)
+
+    def act(self):
+        # Choose a random action from the knowledge base
+        action = random.choice(self.knowledge)
+
+        # Perform the action
+        return action
+
+# Create a new SelfLearningAI object
+ai = SelfLearningAI()
+
+# Let the AI learn from some experiences
+ai.learn("Eat food")
+ai.learn("Sleep")
+ai.learn("Play")
+
+# Let the AI act
+action = ai.act()
+
+# Print the action
+print(action)
